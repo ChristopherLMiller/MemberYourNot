@@ -1,0 +1,4 @@
+name: ${name}
+description: ${description}
+version: ${project.version}
+main: com.moosemanstudios.MemberYourNot.MemberYourNot
