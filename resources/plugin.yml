@@ -2,3 +2,13 @@ name: ${name}
 description: ${description}
 version: ${project.version}
 main: com.moosemanstudios.MemberYourNot.MemberYourNot
+commands:
+    notmember:
+        aliases:
+            nm
+        description: general command
+permissions:
+    notmember.admin:
+        description: all member your not permissions nodes
+    notmember.bypass:
+        description: allow person to bypass check
