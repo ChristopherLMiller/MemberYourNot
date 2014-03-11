@@ -6,11 +6,11 @@
 
 	<!-- project information -->
 	<groupId>com.moosemanstudios</groupId>
-  	<artifactId>MemberYourNot</artifactId>
+  	<artifactId>memberyournot</artifactId>
   	<name>MemberYourNot</name>
   	<url>http://moosemanstudios.com</url>
   	<description>Remove ability to set home in a worldguard region your not a member in</description>
-  	<version>1.0.1</version>
+  	<version>1.0.1-SNAPSHOT</version>
 
   	<!--  properties -->
   	<properties>
