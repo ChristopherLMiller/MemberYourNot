@@ -1,12 +1,12 @@
 package com.moosemanstudios.MemberYourNot;
 
+import com.sk89q.worldguard.LocalPlayer;
+import com.sk89q.worldguard.protection.ApplicableRegionSet;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
-
-import com.sk89q.worldguard.LocalPlayer;
-import com.sk89q.worldguard.protection.ApplicableRegionSet;
 
 public class CommandListener implements Listener {
 	MemberYourNot plugin;
@@ -21,7 +21,7 @@ public class CommandListener implements Listener {
 		if (!plugin.globalAllowSethome) { 
 			if (event.getMessage().toLowerCase().startsWith("/sethome")) {
 				// player issued the command to create a home, now get list of all regions they are currently standing in
-				ApplicableRegionSet regionSet = plugin.wgPlugin.getRegionManager(event.getPlayer().getWorld()).getApplicableRegions(event.getPlayer().getLocation());
+				ApplicableRegionSet regionSet = plugin.wgPlugin.getRegionManager(event.getPlayer().getWorld()).getApplicableRegions((Location) event.getPlayer().getLocation());
 				
 				// revision starts here!
 				LocalPlayer lPlayer = plugin.wgPlugin.wrapPlayer(event.getPlayer());
